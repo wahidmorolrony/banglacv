@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>জীবনবৃতান্ত</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="form-box">
+    <h2 style="text-align: center;">নিচের তথ্য গুলো পুরণ কারে সাবমিট দিয়ে তৈরি হবে সুন্দর একটি জীবনবৃতান্ত</h2>
+
+    <form onsubmit="submitData(); return false;">
+
+        <div class="field">
+            <label>নাম <span class="">*</span></label>
+            <input type="text" id="morol" placeholder="আপনার নাম লিখুন" >
+        </div>
+
+        <div class="field">
+            <label>পিতার নাম <span class="">*</span></label>
+            <input type="text" id="father" placeholder="পিতার নাম লিখুন">
+        </div>
+
+        <div class="field">
+            <label>মাতার নাম <span class="">*</span></label>
+            <input type="text" id="mother" placeholder="মাতার নাম লিখুন" >
+        </div>
+
+        <div class="field">
+            <label>জন্ম তারিখ </label>
+            <input type="text" id="dob" placeholder="01-01-2001" >
+        </div>
+
+        <div class="field">
+            <label>ধর্ম </label>
+            <input type="text" id="relision" placeholder="ইসলাম, সনাতন ইত্যাদি " >
+        </div>
+
+        <div class="field">
+            <label>বৈবাহিক অবস্থা </label>
+            <input type="text" id="marage" placeholder="বিবাহিত বা অবিবাহিত" >
+        </div>
+
+        <div class="field">
+            <label>উচ্চতা <span class="">*</span></label>
+            <input type="text" id="hight" placeholder="৫-৬ এভাবে লিখুন" >
+        </div>
+
+        <div class="field">
+            <label>ওজন <span class="">*</span></label>
+            <input type="text" id="ojon" placeholder="ওজন লিখুন" >
+        </div>
+
+        <div class="field">
+            <label>বর্তমান ঠিকানা <span class="">*</span></label>
+            <input type="text" id="paddress" placeholder="গ্রাম, ডাকঘর, উপজেলা, জেলার নাম লিখুন" >
+        </div>
+
+        <div class="field">
+            <label>স্থায়ী ঠিকানা <span class="">*</span></label>
+            <input type="text" id="peraddress" placeholder="গ্রাম, ডাকঘর, উপজেলা, জেলার নাম লিখুন" >
+        </div>
+
+        <div class="field">
+            <label>মোবাইল নম্বর <span class="">*</span></label>
+            <input type="text"
+                   id="mobile"
+                   placeholder="০১XXXXXXXXX"
+                   title="সঠিক মোবাইল নম্বর লিখুন"
+                   >
+        </div>
+
+        <div class="field">
+            <label>জাতীয় পরিচয়পত্র নং <span class="">*</span></label>
+            <input type="text" id="nid" placeholder="জাতীয় পরিচয়পত্র নম্বর লিখুন" >
+        </div>
+
+        <div class="field">
+            <label>জন্ম নিবন্ধন নং <span class="">*</span></label>
+            <input type="text" id="bdris" placeholder="জন্ম নিবন্ধন নম্বর লিখুন" >
+        </div>
+
+        <div class="field">
+            <label>ইমেইল <span class="">*</span></label>
+            <input type="text" id="email" placeholder="bangladesh@gmail.com" >
+        </div>
+ <!-- ====== Dynamic Table Section ====== -->
+<h3 style="margin-top:20px;">শিক্ষাগত যোগ্যতা</h3>
+
+<table id="dynamicTable" border="1" width="100%" style="border-collapse:collapse;">
+    <thead>
+        <tr>
+            <th>ক্রঃ</th>
+            <th>পরীক্ষার নাম </th>
+            <th>গ্রুপ</th>
+            <th>বোর্ড</th>
+            <th>বিদ্যালয়/কলেজ</th>
+            <th>পাশের বছর</th>
+            <th>ফলাফল</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </tbody>
+</table>
+
+<div style="margin-top:8px;">
+    <button type="button" onclick="addRow()">➕ Row যোগ</button>
+    <button type="button" onclick="removeRow()">➖ Row কমান</button>
+</div>
+
+<br>
+          <div class="field">
+            <label>দক্ষতা <span class="">*</span></label>
+            <input type="text" id="skill" placeholder="কম্পিউটার পরিচালনায় দক্ষ, MS Word, Excel, PowerPoint, ইন্টারনেট ও ই-মেইল ব্যবহারে পারদর্শী,দলগতভাবে কাজ করার অভিজ্ঞতা" >
+        </div>  
+
+        <div class="field">
+            <label>অভিজ্ঞতা <span class="">*</span></label>
+            <input type="text" id="oviggota" placeholder="২ বছর অফিস সহকারী হিসেবে কাজের অভিজ্ঞতা , ডাটা এন্ট্রি ও রিপোর্ট প্রস্তুতে দক্ষ" >
+        </div>
+
+        <div class="field">
+            <label>ভাষা দক্ষতা <span class="">*</span></label>
+            <input type="text" id="lagskill" placeholder="বাংলা: মাতৃভাষা, ইংরেজি: পড়া ও লেখায় দক্ষ " >
+        </div>
+
+          <button type="submit">সাবমিট</button>
+
+    </form>
+</div>
+
+<!-- ================= PREVIEW ================= -->
+
+<div id="preview">
+    <h2 style="text-align:center;"> <U>জীবনবৃত্তান্ত</U></h2>
+
+    <table style="width:98%; padding: 0%;">
+        <tr>
+            <th style="width:3%; text-align:left;">১</th>
+            <th style="width:25%; text-align:left;">নাম</th>
+            <th style="width:5%; text-align:left;">:</th>
+            <th style="width:65%; text-align:left;"><span id="p_name"></span></th>
+        </tr>
+
+        <tr>
+            <td>২</td>
+            <td>পিতার নাম</td>
+            <td>:</td>
+            <td><span id="p_father"></span></td>
+        </tr>
+
+        <tr>
+            <td>৩</td>
+            <td>মাতার নাম</td>
+            <td>:</td>
+            <td><span id="p_mother"></span></td>
+        </tr>
+
+        <tr>
+            <td>৪</td>
+            <td>জন্ম তারিখ</td>
+            <td>:</td>
+            <td> <spam id="p_dob"></spam></td>
+        </tr>
+
+        <tr>
+            <td>৫</td>
+            <td>ধর্ম</td>
+            <td>:</td>
+            <td> <spam id="p_relision"></spam></td>
+        </tr>
+
+        <tr>
+            <td>৬</td>
+            <td>বৈবাহিক অবস্থা</td>
+            <td>:</td>
+            <td> <spam id="p_marage"></spam></td>
+        </tr>
+
+        <tr>
+            <td>৭</td>
+            <td>উচ্চতা</td>
+            <td>:</td>
+            <td> <spam id="p_hight"></spam></td>
+        </tr>
+
+        <tr>
+            <td>৮</td>
+            <td>ওজন</td>
+            <td>:</td>
+            <td> <spam id="p_ojon"></spam></td>
+        </tr>
+
+        <tr>
+            <td>৯</td>
+            <td>বর্তমান ঠিকানা</td>
+            <td>:</td>
+            <td> <spam id="p_paddress"></spam></td>
+        </tr>
+
+        <tr>
+            <td>১০</td>
+            <td>স্থায়ী ঠিকানা</td>
+            <td>:</td>
+            <td> <spam id="p_peraddress"></spam></td>
+        </tr>
+
+        <tr>
+            <td>১১</td>
+            <td>মোবাইল নম্বর</td>
+            <td>:</td>
+            <td> <spam id="p_mobile"></spam></td>
+        </tr>
+
+        <tr>
+            <td>১২</td>
+            <td>জাতীয় পরিচয়পত্র নং</td>
+            <td>:</td>
+            <td> <spam id="p_nid"></spam></td>
+        </tr>
+
+         <tr>
+            <td>১৩</td>
+            <td>জন্ম নিবন্ধন নম্বর</td>
+            <td>:</td>
+            <td> <spam id="p_bdris"></spam></td>
+        </tr>
+
+        <tr>
+            <td>১৪</td>
+            <td>ই-মেইল</td>
+            <td>:</td>
+            <td> <spam id="p_email"></spam></td>
+        </tr>
+        <tr>
+            <td>১৫</td>
+            <td>শিক্ষাগত যোগ্যতা</td>
+            <td>:</td>
+            <td> </td>
+        </tr>
+
+
+    </table>
+
+<table border="1" width="100%" id="previewTable" style="border-collapse:collapse;">
+    <thead>
+        <tr>
+            
+            <th style="width: 15%;">পরীক্ষার নাম</th>
+            <th style="width: 15%;">গ্রুপ</th>
+            <th style="width: 15%;">বোর্ড</th>
+            <th style="width: 37%;">বিদ্যালয়/ কলেজ</th>
+            <th style="width: 11%;">পাশের বছর</th>
+            <th style="width: 7%;">ফলাফল</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- JS দিয়ে ডাটা আসবে -->
+    </tbody>
+</table>
+
+<table style="width:98%; padding: 0%;">
+        <tr>
+            <th style="width:3%; text-align:left;">১৬</th>
+            <th style="width:25%; text-align:left;">দক্ষতা</th>
+            <th style="width:5%; text-align:left;">:</th>
+            <th style="width:63%; text-align:left;"><span id="p_skill"></span></th>
+        </tr>
+
+        <tr>
+            <td>১৭</td>
+            <td>অভিজ্ঞতা</td>
+            <td>:</td>
+            <td><span id="p_oviggota"></span></td>
+        </tr>
+
+        <tr>
+            <td>১৮</td>
+            <td>ভাষা দক্ষতা</td>
+            <td>:</td>
+            <td><span id="p_lagskill"></span></td>
+        </tr>
+        
+    </table>
+      <p>আমি এই মর্মে ঘোষণা করছি যে, 
+        উপরোক্ত সকল তথ্য সত্য ও সঠিক। কোনো তথ্য অসত্য প্রমাণিত হলে 
+        কর্তৃপক্ষ যে কোনো সিদ্ধান্ত গ্রহণ করতে পারবে।</p>
+    <br>
+    <div class="container">
+        <div class="line">তারিখঃ</div>
+        <div class="line"> স্বাক্ষর................................<br> নামঃ<span id="p_na"></span></div>
+    </div>
+
+    
+    <button class="print-btn" onclick="window.print()">প্রিন্ট</button>
+   
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
